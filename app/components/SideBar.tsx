@@ -22,6 +22,7 @@ export default function SideBar() {
                         return (
                             <Link
                                 href={icon.path}
+                                key={icon.path}
                                 className="hover:scale-125 duration-300"
                             >
                                 {<icon.Icon size={32} />}
