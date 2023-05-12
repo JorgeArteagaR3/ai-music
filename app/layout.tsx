@@ -1,4 +1,4 @@
-import SideBar from "./components/SideBar";
+import SideBar from "../components/SideBar";
 import "./globals.css";
 
 export const metadata = {
@@ -12,7 +12,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
+        <html lang="en" className="bg-myblack">
             <body className="container mx-auto overflow-hidden">
                 <div className="bg-primary flex rounded-[60px]">
                     <SideBar />

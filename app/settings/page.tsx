@@ -1,4 +1,4 @@
-import MainCard from "../components/MainCard";
+import MainCard from "../../components/MainCard";
 
 export default function Settings() {
     return (
