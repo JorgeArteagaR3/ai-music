@@ -1,6 +1,6 @@
 import MainCard from "../components/MainCard";
 import Button from "../components/UI/Button";
-import TransformForm from "@/components/TransformForm";
+import TransformForm from "@/components/TransformForm/TransformForm";
 
 export default function Home() {
     return (

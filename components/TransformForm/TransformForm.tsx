@@ -1,8 +1,8 @@
 "use client";
-
+import "./TransformForm.css";
 import { useState } from "react";
-import Box from "./UI/Box";
-import Select from "./UI/Select";
+import Box from "../UI/Box";
+import Select from "../UI/Select";
 import clsx from "clsx";
 import { FormState } from "@/types";
 
@@ -36,18 +36,16 @@ const TransformForm = () => {
         file: null,
     });
     console.log(form);
+
     const handleDragEnter = (e: React.DragEvent<HTMLInputElement>) => {
-        e.preventDefault();
         setIsDragOver(true);
     };
 
     const handleDragLeave = (e: React.DragEvent<HTMLInputElement>) => {
-        e.preventDefault();
         setIsDragOver(false);
     };
 
     const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-        e.preventDefault();
         const file = e.target.files![0];
         if (file) {
             setFileName(file.name);
@@ -90,10 +88,10 @@ const TransformForm = () => {
                     <input
                         id="uploadFile"
                         type="file"
-                        onDrop={(e) => {
+                        onDrop={() => {
                             setIsDragOver(false);
                         }}
-                        className="w-full h-full text-sm opacity-0 absolute bg-gray-400 left-0 top-0 z-20 cursor-pointer z-30"
+                        className="w-full h-full text-sm bg-gray-400 cursor-pointer z-20 absolute opacity-0"
                         onDragEnter={handleDragEnter}
                         onDragOver={handleDragEnter}
                         onDragLeave={handleDragLeave}
